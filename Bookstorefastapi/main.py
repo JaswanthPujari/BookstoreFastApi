@@ -39,7 +39,7 @@ def add_book(book:Book):
     newbook={"id":book_id,**book.dict()}
     books.append(newbook)
     save_data(books)
-    return newbook
+    return "A new book is added"
 @app.put("/books/{book_id}")
 def update_book(book_id:int,updatebook:Book):
     books=load_data()
